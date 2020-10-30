@@ -201,7 +201,7 @@ class PersonalPage extends StatefulWidget {
 
 ### 2.3.2 枚举
 
-- **禁止** `switch` 中列出所有的枚举值，不要用 `default` 。
+- **必须** `switch` 中列出所有的枚举值，不要用 `default` 。
 - **必须** 使用 `switch` 而不是 `if` 来判断枚举内容。
 
 ### 2.3.3 字符串
@@ -225,4 +225,8 @@ class PersonalPage extends StatefulWidget {
 
 ### 2.3.5 局部变量
 
+### 2.3.6 异步类
+
+- **必须** `StreamController` 如果不再使用必须 `close`。
+- **必须** 监听 `Stream` 产生的 `StreamSubscription` 不再收听必须手动调用 `cancel` 取消监听。
 
